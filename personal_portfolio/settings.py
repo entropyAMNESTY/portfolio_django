@@ -129,3 +129,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Creates a new destination for a new produced media folder, where images will be stored for the Database
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+
+try:
+    from .local_settings import *
+except ImportError:
+    print('Looks like not local file. You must be on production')
