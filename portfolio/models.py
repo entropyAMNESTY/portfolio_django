@@ -7,3 +7,7 @@ class Project(models.Model):
     image = models.ImageField(upload_to='portfolio/images/')
     # Making the URL part optional by adding blank=True
     url = models.URLField(blank=True)
+
+    def __str__(self):
+        return self.title
+        
